@@ -14,14 +14,9 @@ db.collection('Todos').deleteMany({text: 'Eat lunch'}).then((result) => {
 });
 
 // deleteOne
-// db.collection('Todos').deleteOne({text: 'Eat lunch'}).then(result) => {
-//   console.log(result);
-// });
 
 // findOneAndDelete
-db.collection('Todos').findOneAndDelete({completed: false}).then((result) => {
-  console.log(result);
-});
+
 
     // db.close();
 });
