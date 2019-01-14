@@ -1,10 +1,5 @@
-// const MongoClient = require('mongodb').MongoClient
+// const MongoClient = require('mongodb').MongoClient;
 const {MongoClient, ObjectID} = require('mongodb');
-
-var obj = new ObjectID();
-console.log(obj);
-
-
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
   if (err) {
@@ -23,16 +18,18 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
   //   console.log(JSON.stringify(result.ops, undefined, 2));
   // });
 
-//  Insert new doc into Users (name, age, location)
-// db.collection('Users').insertOne({
-//   name: "Jeffery Lewis",
-//   age: 35,
-//   location: "Kennewick Wa"
-// }, (err, result) => {
-//   if (err) {
-//     return console.log('Unable to insert User Info in Database', err);
-//   }
-//   console.log(result.ops[0]._id.getTimestamp());
-// });
+  // Insert new doc into Users (name, age, location)
+  // db.collection('Users').insertOne({
+  //   name: 'Andrew',
+  //   age: 25,
+  //   location: 'Philadelphia'
+  // }, (err, result) => {
+  //   if (err) {
+  //     return console.log('Unable to insert user', err);
+  //   }
+  //
+  //   console.log(result.ops[0]._id.getTimestamp());
+  // });
+
   db.close();
 });
